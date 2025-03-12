@@ -1,6 +1,11 @@
 # Customer_Feedback_Analysis_System-NLP-Naive_Bayes-Streamlit
 This system provides automated classification of customer feedback into Complaints, Suggestions, and Praises using Natural Language Processing (NLP). It features a real-time dashboard with interactive visualizations for business insights.
 
+- Smart NLP Classification
+- Real-Time Dashboard
+- Production-Ready ML Pipeline
+- Actionable Business Insights
+
  ![image](https://github.com/user-attachments/assets/6e9a3691-de31-4e81-b83f-73b546525eab)
 
 ## How to Run
