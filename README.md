@@ -1,5 +1,8 @@
 # Customer_Feedback_Analysis_System-NLP-Naive_Bayes-Streamlit
 This system provides automated classification of customer feedback into Complaints, Suggestions, and Praises using Natural Language Processing (NLP). It features a real-time dashboard with interactive visualizations for business insights.
+
+ ![image](https://github.com/user-attachments/assets/6e9a3691-de31-4e81-b83f-73b546525eab)
+
 ## How to Run
 
 ### Prerequisites
@@ -51,15 +54,46 @@ This system provides automated classification of customer feedback into Complain
     Classifier: Multinomial Naive Bayes
     Model Persistence: Saved as .pkl files for production use
 
+### 3. Model Evaluation Metrics
+Key Performance Indicators
+| Metric       | Formula                          | Purpose                   | Ideal Value       |
+|--------------|----------------------------------|---------------------------|-------------------|
+| **Accuracy** | `(Correct Predictions) / (Total Predictions)` | Overall correctness       | > 0.85           |
+| **Precision**| `TP / (TP + FP)`                 | Avoid false positives     | Per-class > 0.75 |
+| **Recall**   | `TP / (TP + FN)`                 | Capture all positives     | Per-class > 0.70 |
+| **F1 Score** | `2*(Precision*Recall)/(Precision+Recall)` | Balance Precision/Recall | > 0.80           |
+
+**Legend:**  
+- TP = True Positives  
+- FP = False Positives  
+- FN = False Negatives
+
+Output Result:
+
+  ![image](https://github.com/user-attachments/assets/75bc17ee-dfa4-4afc-a193-fce3bd09caef)
+
+
 ## Features
 1. Real-Time Analysis
    - Instant feedback classification
    - Color-coded results (Red=Complaint, Yellow=Suggestion, Green=Praise)
    - Actionable response templates
+
+     ![image](https://github.com/user-attachments/assets/613282fe-1ac4-457c-acbc-c4428a9c1682)
+
 2. Visual Analytics
    - Interactive rating distribution histogram
+   - 
+     ![image](https://github.com/user-attachments/assets/c74bbea6-2d32-40b6-88e4-74de9cb41a2d)
+
    - Category proportion pie chart
+     
+     ![image](https://github.com/user-attachments/assets/a5a65d84-4c53-45b0-ae86-0ec46c8661ea)
+
    - Comparative word clouds across categories
+     
+     ![image](https://github.com/user-attachments/assets/dda2b6e3-3351-49ed-9eb8-62eb55a0023a)
+
 3. Production-Ready
    - Model caching for fast reloads
    - Error handling for missing data
