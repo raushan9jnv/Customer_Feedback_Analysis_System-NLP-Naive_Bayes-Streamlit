@@ -16,11 +16,51 @@ This system provides automated classification of customer feedback into Complain
   joblib==1.3.2
 
 ### Setup Instructions
-1. Clone Repository
-2. Install Dependencies
-   - pip install -r requirements.txt
-3. Place your Customer Feedback Analysis.csv in the project root
-4. Train Model
-   - python train_model.py
-5. Launch Dashboard
-   - streamlit run app.py
+    
+    ```text
+    1. Clone Repository
+    2. Install Dependencies
+       - pip install -r requirements.txt
+    3. Place your Customer Feedback Analysis.csv in the project root
+    4. Train Model
+       - python train_model.py
+    5. Launch Dashboard
+       - streamlit run app.py
+
+## Methodology
+### 1. Data Preprocessing
+- Missing Values: Remove rows with empty reviews/ratings
+- Rating Conversion:
+    ```text
+    Rating | Category
+    ≤2     → Complaint
+    3      → Suggestion
+    ≥4     → Praise
+    
+- Text Cleaning Pipeline:
+    ```
+    1. Lowercase conversion
+    2. Remove punctuation/numbers
+    3. Tokenization
+    4. Stopword removal (English)
+    5. Filter short words (<3 characters)
+
+### 2. Machine Learning Model
+    ```
+    Vectorization: TF-IDF
+    Classifier: Multinomial Naive Bayes
+    Model Persistence: Saved as .pkl files for production use
+
+## Features
+1. Real-Time Analysis
+   - Instant feedback classification
+   - Color-coded results (Red=Complaint, Yellow=Suggestion, Green=Praise)
+   - Actionable response templates
+2. Visual Analytics
+   - Interactive rating distribution histogram
+   - Category proportion pie chart
+   - Comparative word clouds across categories
+3. Production-Ready
+   - Model caching for fast reloads
+   - Error handling for missing data
+   - Mobile-responsive design
